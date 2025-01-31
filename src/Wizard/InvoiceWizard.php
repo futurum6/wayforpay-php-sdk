@@ -69,7 +69,6 @@ class InvoiceWizard extends RequestWizard
      * @var string
      */
     protected $serviceUrl;
-
     /**
      * @var string
      */
@@ -217,10 +216,8 @@ class InvoiceWizard extends RequestWizard
         $this->serviceUrl = $serviceUrl;
         return $this;
     }
-
     /**
      * @param string $returnUrl
-     *
      * @return InvoiceWizard
      */
     public function setReturnUrl($returnUrl)
@@ -228,7 +225,6 @@ class InvoiceWizard extends RequestWizard
         $this->returnUrl = $returnUrl;
         return $this;
     }
-
     /**
      * @param int $holdTimeout
      *
@@ -291,11 +287,11 @@ class InvoiceWizard extends RequestWizard
             $this->client,
             $this->paymentSystems,
             $this->serviceUrl,
+            $this->returnUrl,
             $this->holdTimeout,
             $this->orderTimeout,
             $this->orderLifetime,
-            $this->language,
-            $this->returnUrl
+            $this->language
         );
     }
 }
