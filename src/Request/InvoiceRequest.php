@@ -111,6 +111,7 @@ class InvoiceRequest extends ApiRequest
         Client $client = null,
         PaymentSystems $paymentSystems = null,
         $serviceUrl = null,
+        $returnUrl= null,
         $holdTimeout = null,
         $orderTimeout = null,
         $orderLifetime = null,
@@ -129,6 +130,7 @@ class InvoiceRequest extends ApiRequest
         $this->client = $client ?: new Client();
         $this->paymentSystems = $paymentSystems ?: new PaymentSystems();
         $this->serviceUrl = strval($serviceUrl);
+        $this->returnUrl = strval($returnUrl);
         $this->holdTimeout = intval($holdTimeout);
         $this->orderTimeout = intval($orderTimeout);
         $this->orderLifetime = intval($orderLifetime);
